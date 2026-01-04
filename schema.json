@@ -1,0 +1,21 @@
+{
+    "tables": {
+      "Employee": {
+        "columns": ["EmployeeId", "Name", "Email", "DepartmentId", "ManagerId", "Salary"]
+      },
+      "Department": {
+        "columns": ["DepartmentId", "DepartmentName"]
+      }
+    },
+    "relationships": [
+      {
+        "from": "Employee.DepartmentId",
+        "to": "Department.DepartmentId"
+      },
+      {
+        "from": "Employee.ManagerId",
+        "to": "Employee.EmployeeId"
+      }
+    ]
+  }
+  
